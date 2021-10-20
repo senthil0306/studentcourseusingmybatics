@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'com.studentcourse'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'io.swagger:swagger-models:1.5.21'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	 //Commons lang
+    implementation "org.apache.commons:commons-lang3:3.3.2"
+    implementation "org.apache.commons:commons-collections4:4.0"
+    implementation "org.apache.tomcat:tomcat-jdbc:9.0.10"
+    compileOnly 'com.google.code.findbugs:annotations:3.0.1'
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.1'
+	compileOnly 'org.slf4j:slf4j-ext:2.0.0-alpha5'
+	implementation 'io.cucumber:cucumber-java:2.0.0'
+	testImplementation 'info.cukes:cucumber-junit:1.2.6'
+	
+	
+
+}
+
+test {
+	useJUnitPlatform()
+}

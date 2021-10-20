@@ -1,0 +1,35 @@
+spring:
+  profiles: 
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    initialization-mode: always
+    platform: h2
+    hikari:
+      driver-class-name: org.h2.Driver
+      minimum-idle: 1
+      maximum-pool-size: 34
+      jdbc-url: jdbc:h2:mem:student_couse
+  database:
+   h2:
+      username: sa
+      password:
+  security:
+   user:
+     name: admin
+     password: admin
+   basic:
+     enabled: true
+
+---
+logging:
+  level:
+    ROOT: WARN
+    org.springframework.web: INFO
+    org.springframework.boot: INFO
+    com.student.course: INFO
+

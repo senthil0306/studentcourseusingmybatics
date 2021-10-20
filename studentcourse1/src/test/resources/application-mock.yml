@@ -1,0 +1,15 @@
+dna:
+  oauth:
+    resource-server:
+      enabled: false
+    client:
+      enabled: false
+
+environment: mock
+
+weather:
+  url: http://localhost:${wiremock.server.port}
+
+---
+spring:
+  profiles.include: h2
